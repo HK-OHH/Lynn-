@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Scheduler</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    연결 중...
+
+    <script>
+
+        const targetUrl =
+            "https://woomi-smart-scheduler.jogh.workers.dev/site/b4c75edb-1ab6-47f6-a927-6ca27674653d";
+
+        if (navigator.onLine) {
+            window.location.replace(targetUrl);
+        } else {
+            document.body.innerHTML =
+                "<h2>인터넷 연결을 확인해주세요.</h2>";
+        }
+
+    </script>
+
+</body>
+
+</html>

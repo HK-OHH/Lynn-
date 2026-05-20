@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Lynn Scheduler</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #0b3d91, #0057d9);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: env(safe-area-inset-top) 20px env(safe-area-inset-bottom);
+        }
+
+        .header {
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 20px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: bold;
+            backdrop-filter: blur(12px);
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .content {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 22px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            opacity: 0.92;
+            line-height: 1.5;
+        }
+
+        .main-button {
+            margin-top: 28px;
+            width: 100%;
+            border: none;
+            border-radius: 18px;
+            padding: 18px;
+            background: white;
+            color: #004fc4;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .main-button:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 24px 0;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            Lynn,
+        </div>
+
+        <h1>고양창릉 S-1BL 우미 린</h1>
+
+        <div class="subtitle">
+            스마트 출력일보 관리 시스템<br />
+            모바일 앱
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+            <div class="card-title">
+                스마트 출력일보 관리 시스템 연결
+            </div>
+
+            <div class="card-text">
+                출력일보 관리 페이지 이동합니다.
+            </div>
+
+            <button class="main-button" onclick="openScheduler()">
+                접속
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                공지사항
+            </div>
+
+            <div class="card-text">
+                최신 시스템 공지 및 업데이트 내용을 확인하세요.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Version 1.0.0
+    </div>
+
+    <script>
+        function openScheduler() {
+            function openScheduler() {
+                window.location.href = "loading.html";
+            }
+
+            window.addEventListener('offline', () => {
+                alert('인터넷 연결을 확인해주세요.');
+            });
+    </script>
+
+</body>
+
+</html>
